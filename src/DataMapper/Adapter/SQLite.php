@@ -7,7 +7,7 @@ namespace DataMapper\Adapter;
  * @link http://phpdatamapper.com
  * @link http://github.com/vlucas/phpDataMapper
  */
-class Mysql extends PDO
+class SQLite extends PDO
 {
 	// Format for date columns, formatted for PHP's date() function
 	protected $format_date = "Y-m-d";
@@ -62,7 +62,7 @@ class Mysql extends PDO
 	 */
 	public function dsn()
 	{
-		$dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->database . '';
+		$dsn = 'sqlite:' . $this->host;
 		return $dsn;
 	}
 	

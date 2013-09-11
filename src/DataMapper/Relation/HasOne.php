@@ -7,7 +7,7 @@ require_once(dirname(dirname(__FILE__)) . '/Relation.php');
  * @author Vance Lucas <vance@vancelucas.com>
  * @link http://phpdatamapper.com
  */
-class phpDataMapper_Relation_HasOne extends phpDataMapper_Relation
+class Relation_HasOne extends Relation
 {
 	/**
 	 * Load records with current relation data

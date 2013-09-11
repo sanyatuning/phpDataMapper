@@ -1,10 +1,11 @@
 <?php
-require_once dirname(__FILE__) . '/init.php';
+
+namespace DataMapper;
 
 /**
  * Tests to stress the Query adapter and how it handles conditions
  */
-class ConditionsTest extends PHPUnit_Framework_TestCase
+class ConditionsTest extends TestCase
 {
 	protected $backupGlobals = false;
 	const num_posts = 10;
@@ -14,10 +15,10 @@ class ConditionsTest extends PHPUnit_Framework_TestCase
 	 */
 	public static function setUpBeforeClass()
 	{
-		$blogMapper = fixture_mapper('Blog');
+		$blogMapper = self::fixtureMapper('Blog');
 		$blogMapper->truncateDatasource();
 		
-		$blogCommentsMapper = fixture_mapper('Blog_Comments');
+		$blogCommentsMapper = self::fixtureMapper('Blog_Comments');
 		$blogCommentsMapper->truncateDatasource();
 		
 		// Insert blog dummy data

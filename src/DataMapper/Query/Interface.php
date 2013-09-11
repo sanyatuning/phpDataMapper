@@ -1,12 +1,13 @@
 <?php
-/**
+namespace DataMapper;
+/** 
  * Query interface
  *
  * @package phpDataMapper
  * @link http://phpdatamapper.com
  * @link http://github.com/vlucas/phpDataMapper
  */
-interface phpDataMapper_Query_Interface
+interface Query_Interface
 {	
 	/**
 	 * Constructor
@@ -14,7 +15,7 @@ interface phpDataMapper_Query_Interface
 	 * @param object $adapter
 	 * @return string
 	 */
-	public function __construct(phpDataMapper_Adapter_Interface $adapter);
+	public function __construct(Adapter_Interface $adapter);
 	
 	/**
 	 * Called from mapper's select() function

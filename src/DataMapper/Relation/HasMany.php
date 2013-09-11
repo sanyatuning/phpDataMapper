@@ -7,12 +7,12 @@ require_once(dirname(dirname(__FILE__)) . '/Relation.php');
  * @author Vance Lucas <vance@vancelucas.com>
  * @link http://phpdatamapper.com
  */
-class phpDataMapper_Relation_HasMany extends phpDataMapper_Relation implements Countable, IteratorAggregate, ArrayAccess
+class Relation_HasMany extends Relation implements Countable, IteratorAggregate, ArrayAccess
 {
 	/**
 	 * Load records with current relation data
 	 *
-	 * @return phpDataMapper_Query
+	 * @return Query
 	 */
 	public function all()
 	{
@@ -23,7 +23,7 @@ class phpDataMapper_Relation_HasMany extends phpDataMapper_Relation implements C
 	/**
 	 * Find first record in the set
 	 *
-	 * @return phpDataMapper_Entity
+	 * @return Entity
 	 */
 	public function first()
 	{
@@ -48,7 +48,7 @@ class phpDataMapper_Relation_HasMany extends phpDataMapper_Relation implements C
 	 * SPL IteratorAggregate function
 	 * Called automatically when attribute is used in a 'foreach' loop
 	 *
-	 * @return phpDataMapper_Model_ResultSet
+	 * @return Model_ResultSet
 	 */
 	public function getIterator()
 	{

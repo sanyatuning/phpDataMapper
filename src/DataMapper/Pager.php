@@ -1,12 +1,13 @@
 <?php
-/**
- * Dynamic and automated pagination for phpDataMapper_Query objects
+namespace DataMapper;
+/** 
+ * Dynamic and automated pagination for Query objects
  * 
  * @package phpDataMapper
  * @link http://phpdatamapper.com
  * @link http://github.com/vlucas/phpDataMapper
  */
-class phpDataMapper_Pager
+class Pager
 {
 	protected $_mapper;
 	protected $_query;
@@ -17,7 +18,7 @@ class phpDataMapper_Pager
 	/**
 	 *
 	 */
-	public function __construct(phpDataMapper_Query $query, $page = 1, $itemsPerPage = 30)
+	public function __construct(Query $query, $page = 1, $itemsPerPage = 30)
 	{
 		$this->_mapper = $query->mapper();
 		$this->_query = $query;

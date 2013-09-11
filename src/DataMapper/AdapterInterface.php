@@ -1,11 +1,12 @@
 <?php
-/**
+namespace DataMapper;
+/** 
  * Adapter Interface
  * 
  * @package phpDataMapper
  * @link http://phpdatamapper.com
  */
-interface phpDataMapper_Adapter_Interface
+interface AdapterInterface
 {
     /**
     * @param mixed $host Host string or pre-existing PDO object
@@ -59,7 +60,7 @@ interface phpDataMapper_Adapter_Interface
 	/**
 	 * Read from data source using given query object
 	 */
-	public function read(phpDataMapper_Query $query);
+	public function read(Query $query);
 	
 	
 	/**

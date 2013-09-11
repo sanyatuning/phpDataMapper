@@ -1,12 +1,13 @@
 <?php
-/**
+namespace DataMapper;
+/** 
  * Handles generic phpDataMapper errors
  *
  * @package phpDataMapper
  * @link http://phpdatamapper.com
  * @link http://github.com/vlucas/phpDataMapper
  */
-class phpDataMapper_Exception extends Exception
+class Exception extends Exception
 {
 	public function getError()
 	{

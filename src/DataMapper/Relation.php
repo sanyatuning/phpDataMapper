@@ -1,12 +1,13 @@
 <?php
-/**
+namespace DataMapper;
+/** 
  * DataMapper abstract class for relations
  * 
  * @package phpDataMapper
  * @author Vance Lucas <vance@vancelucas.com>
  * @link http://phpdatamapper.com
  */
-abstract class phpDataMapper_Relation
+abstract class Relation
 {
 	protected $_mapper;
 	protected $_foreignKeys;
@@ -22,7 +23,7 @@ abstract class phpDataMapper_Relation
 	 * @param object $mapper DataMapper object to query on for relationship data
 	 * @param array $resultsIdentities Array of key values for given result set primary key
 	 */
-	public function __construct(phpDataMapper_Base $mapper, array $conditions, array $relationData)
+	public function __construct(Base $mapper, array $conditions, array $relationData)
 	{
 		$this->_mapper = $mapper;
 		$this->_conditions = $conditions;

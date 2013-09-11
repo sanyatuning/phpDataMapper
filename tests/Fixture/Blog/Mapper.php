@@ -1,4 +1,7 @@
 <?php
+
+use DataMapper\TestMapper;
+
 /**
  * Blog Mapper
  */

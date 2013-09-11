@@ -1,4 +1,7 @@
 <?php
+
+namespace DataMapper;
+
 /**
  * DataMapper entity class - each item is fetched into this object
  * 
@@ -6,7 +9,7 @@
  * @link http://phpdatamapper.com
  * @link http://github.com/vlucas/phpDataMapper
  */
-class phpDataMapper_Entity
+class Entity
 {
 	protected $_loaded;
 	protected $_data = array();

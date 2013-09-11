@@ -1,12 +1,13 @@
 <?php
-/**
+namespace DataMapper;
+/** 
  * Query Object - Used to build adapter-independent queries PHP-style
  * 
  * @package phpDataMapper
  * @author Vance Lucas <vance@vancelucas.com>
  * @link http://phpdatamapper.com
  */
-class phpDataMapper_Query implements Countable, IteratorAggregate
+class Query implements \Countable, \IteratorAggregate
 {
 	protected $_mapper;
 	
@@ -23,7 +24,7 @@ class phpDataMapper_Query implements Countable, IteratorAggregate
 	/**
 	 *	Constructor Method
 	 */
-	public function __construct(phpDataMapper_Base $mapper)
+	public function __construct(Base $mapper)
 	{
 		$this->_mapper = $mapper;
 	}
@@ -207,7 +208,7 @@ class phpDataMapper_Query implements Countable, IteratorAggregate
 	 * SPL IteratorAggregate function
 	 * Called automatically when attribute is used in a 'foreach' loop
 	 *
-	 * @return phpDataMapper_Query_Set
+	 * @return Query_Set
 	 */
 	public function getIterator()
 	{
@@ -232,7 +233,7 @@ class phpDataMapper_Query implements Countable, IteratorAggregate
 	/**
 	 * Return the first entity matched by the query
 	 *
-	 * @return mixed phpDataMapper_Entity on success, boolean false on failure
+	 * @return mixed Entity on success, boolean false on failure
 	 */
 	public function first()
 	{

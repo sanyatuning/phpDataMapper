@@ -1,11 +1,10 @@
 <?php
-require_once dirname(__FILE__) . '/init.php';
-
+namespace DataMapper;
 /**
  * Basic CRUD Tests
  * Create, Read, Update, Delete
  */
-class RelationsTest extends PHPUnit_Framework_TestCase
+class RelationsTest extends TestCase
 {
 	protected $backupGlobals = false;
 	protected $blogMapper;
@@ -16,7 +15,7 @@ class RelationsTest extends PHPUnit_Framework_TestCase
 	public function setUp()
 	{
 		// New mapper instance
-		$this->blogMapper = fixture_mapper('Blog');
+		$this->blogMapper = self::fixtureMapper('Blog');
 	}
 	public function tearDown() {}
 	
